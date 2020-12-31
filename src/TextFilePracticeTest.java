@@ -12,42 +12,42 @@ import org.junit.Test;
 public class TextFilePracticeTest {
 
    /** Test case for the printText method. */
-   @Test
-   public void printTextTest() {
-      String expected = "It's like a flag at half mast as frames click fast\n"
-      		+ "Not a thing will last as past is past\n"
-      		+ "Like stacks of thoughts that got played and worn\n"
-      		+ "Used over and over till they were tired and torn\n"
-      		+ "Like a broken clock that can't tell time\n"
-      		+ "Like a thick ass book that's filled with wack rhymes\n"
-      		+ "Like a scorching blaze that burned the sand\n"
-      		+ "Like a band that planned and planned and planned\n"
-      		+ "And flew down like a raven in the dark of night\n"
-      		+ "And snatched up the worm helpless to fight\n"
-      		+ "And brought it back to the nest singing microphone check\n"
-      		+ "One two one two, this is just a test\n"
-      		+ "One two one two, this is just a test\n"
-      		+ "One two one two, this is just a test\n"
-      		+ "It's like sand in one hand You can't hold for long\n"
-      		+ "Like scheming on a plan that goes all wrong\n"
-      		+ "It's like fudge and caramel they're not the same\n"
-      		+ "And it's a shame all you talk is game\n"
-      		+ "You act like a diamond waiting to be set\n"
-      		+ "In a gold ring, as if, I bet\n"
-      		+ "As time goes by in this give and take\n"
-      		+ "As long as I learn I will make mistakes\n"
-      		+ "Now, what do I want? What do I need?\n"
-      		+ "Why do I want it? What's in it for me?\n"
-      		+ "It's the imagery of technology\n"
-      		+ "Is what you get is what you see\n"
-      		+ "Don't worry your mind\n"
-      		+ "When you give it your best\n"
-      		+ "One two one two this is just a test\n"
-      		+ "One two one two, this is just a test\n"
-      		+ "One two one two, this is just a test";
-      TextFilePractice test =  new TextFilePractice();
-      assertEquals(expected, test.printText());
-   }
+//   @Test
+//   public void printTextTest() {
+//      String expected = "It's like a flag at half mast as frames click fast\n"
+//      		+ "Not a thing will last as past is past\n"
+//      		+ "Like stacks of thoughts that got played and worn\n"
+//      		+ "Used over and over till they were tired and torn\n"
+//      		+ "Like a broken clock that can't tell time\n"
+//      		+ "Like a thick ass book that's filled with wack rhymes\n"
+//      		+ "Like a scorching blaze that burned the sand\n"
+//      		+ "Like a band that planned and planned and planned\n"
+//      		+ "And flew down like a raven in the dark of night\n"
+//      		+ "And snatched up the worm helpless to fight\n"
+//      		+ "And brought it back to the nest singing microphone check\n"
+//      		+ "One two one two, this is just a test\n"
+//      		+ "One two one two, this is just a test\n"
+//      		+ "One two one two, this is just a test\n"
+//      		+ "It's like sand in one hand You can't hold for long\n"
+//      		+ "Like scheming on a plan that goes all wrong\n"
+//      		+ "It's like fudge and caramel they're not the same\n"
+//      		+ "And it's a shame all you talk is game\n"
+//      		+ "You act like a diamond waiting to be set\n"
+//      		+ "In a gold ring, as if, I bet\n"
+//      		+ "As time goes by in this give and take\n"
+//      		+ "As long as I learn I will make mistakes\n"
+//      		+ "Now, what do I want? What do I need?\n"
+//      		+ "Why do I want it? What's in it for me?\n"
+//      		+ "It's the imagery of technology\n"
+//      		+ "Is what you get is what you see\n"
+//      		+ "Don't worry your mind\n"
+//      		+ "When you give it your best\n"
+//      		+ "One two one two this is just a test\n"
+//      		+ "One two one two, this is just a test\n"
+//      		+ "One two one two, this is just a test";
+//      TextFilePractice test =  new TextFilePractice();
+//      assertEquals(expected, test.printText());
+//   }
 //
 //   /** Test case for the search method. */
 //   @Test

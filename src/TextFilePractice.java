@@ -1,5 +1,5 @@
 import java.io.File;
-import java.io.IOException;
+//import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,18 +15,14 @@ import java.util.Scanner;
 public class TextFilePractice {
 	private static boolean started = false;
 	private static File fileName = null;
+	private static int numberOfNums = 0;
 	
 	public static void main(String[] args) {
-		programStart();
+		programChooser ();
 	}
 	
 	
 	public static void printText() {
-		fileHandler();
-//		try {	
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			try {
 				Scanner textInput = new Scanner(fileName);
 				while (textInput.hasNextLine()) {
@@ -38,18 +34,11 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-		playAgain();
 	}
 	
 	public static void findString() {
-		fileHandler();
 		try {	
-			//System.out.print("Enter the file name: ");
 			Scanner stringInput = new Scanner(System.in);
-			//File filename = new File(input.nextLine());
 			System.out.print("What am I looking for? ");
 			String findString = stringInput.nextLine();
 			try {
@@ -69,15 +58,10 @@ public class TextFilePractice {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		playAgain();
 	}
 	
 	public static void reverseTextByLine() {
 		ArrayList<String> reverse = new ArrayList<String>();
-//		try {	
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			try {
 				Scanner textInput = new Scanner(fileName);
 				while (textInput.hasNextLine()) {
@@ -91,18 +75,10 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-		playAgain();
 	}
 	
 	public static void reverseText() {
 		ArrayList<String> reverse = new ArrayList<String>();
-//		try {	
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			try {
 				Scanner textInput = new Scanner(fileName);
 				while (textInput.hasNext()) {
@@ -116,17 +92,12 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-		playAgain();
 	}
 	
 	public static void findLength() {
 		try {	
-			//System.out.print("Enter the file name: ");
+			@SuppressWarnings("resource")
 			Scanner input = new Scanner(System.in);
-			//File filename = new File(input.nextLine());
 			System.out.print("What length am I looking for? ");
 			int stringLength = input.nextInt();
 			try {
@@ -137,21 +108,19 @@ public class TextFilePractice {
 						System.out.println(string);
 					}
 				}
+				textInput.close();
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-			input.close();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		playAgain();
 	}
 	
 	public static void findWord() {
 		try {	
-			//System.out.print("Enter the file name: ");
+			@SuppressWarnings("resource")
 			Scanner input = new Scanner(System.in);
-			//File filename = new File(input.nextLine());
 			System.out.print("What word am I looking for? ");
 			String wordFind = input.nextLine();
 			int count = 0;
@@ -171,14 +140,9 @@ public class TextFilePractice {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		playAgain();
 	}
 	
 	public static void wordCount() {
-//		try {	
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			int count = 0;
 			try {
 				Scanner textInput = new Scanner(fileName);
@@ -191,17 +155,9 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-		playAgain();
 	}
 	
 	public static void charCount() {
-//		try {	
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			int count = 0;
 			try {
 				Scanner textInput = new Scanner(fileName);
@@ -214,18 +170,10 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-		playAgain();
 	}
 	
 	public static void backwardsWords() {
 		ArrayList<String> reverseWords = new ArrayList<String>();
-//		try {
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			try {
 				Scanner textInput = new Scanner(fileName);
 				while (textInput.hasNext()) {
@@ -240,22 +188,15 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
 		for (String word : reverseWords) {
 			System.out.println(word);
 		}
-		playAgain();
 	}
 	
 	public static void backwardsLine() {
 		ArrayList<String> reverse = new ArrayList<String>();
-//		try {	
-//			System.out.print("Enter the file name: ");
-//			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			try {
+				@SuppressWarnings("resource")
 				Scanner textInput = new Scanner(fileName);
 				while (textInput.hasNextLine()) {
 					String line = textInput.nextLine();
@@ -271,17 +212,12 @@ public class TextFilePractice {
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-//		} catch (Exception ex) {
-//			ex.printStackTrace();
-//		}
-		playAgain();
 	}
 	
 	public static void findChar() {
 		try {	
-//			System.out.print("Enter the file name: ");
+			@SuppressWarnings("resource")
 			Scanner input = new Scanner(System.in);
-//			File filename = new File(input.nextLine());
 			System.out.print("What character am I looking for? ");
 			char charFind = input.nextLine().charAt(0);
 			int count = 0;
@@ -303,11 +239,11 @@ public class TextFilePractice {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		playAgain();
 	}
 	
-	public static void programStart() {
+	public static void stringProgramStart() {
 		try {
+			fileHandler();
 			System.out.println("Hello Dave. What would you like me to do? ");
 			System.out.println("1) Print entire file");
 			System.out.println("2) Print file backwards line by line");
@@ -322,6 +258,7 @@ public class TextFilePractice {
 			System.out.println("11) Find how many times a spcific character appears");
 			System.out.println("Please select an option");
 			
+			@SuppressWarnings("resource")
 			Scanner input = new Scanner(System.in);
 			int selection = input.nextInt();
 			
@@ -364,6 +301,113 @@ public class TextFilePractice {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+		playAgain();
+	}
+	
+	public static int numSum() {
+		numberOfNums = 0;
+		int returnNum = 0;
+		try {
+			Scanner numInput = new Scanner(fileName);
+			while (numInput.hasNext()) {
+				int num = numInput.nextInt();
+				returnNum += num;
+				numberOfNums++;
+			}
+			numInput.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return returnNum;
+	}
+	
+	public static int numAverage() {
+		return (numSum() / numberOfNums);
+	}
+	
+	public static ArrayList<Integer> oddNums() {
+		ArrayList<Integer> oddNumsArray = new ArrayList<Integer>();
+		try {
+			Scanner numInput = new Scanner(fileName);
+			while (numInput.hasNext()) {
+				int num = numInput.nextInt();
+				if (num % 2 != 0) {
+					oddNumsArray.add(num);
+				}
+			}
+			numInput.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return oddNumsArray;
+	}
+	
+	public static ArrayList<Integer> evenNums() {
+		ArrayList<Integer> evenNumsArray = new ArrayList<Integer>();
+		try {
+			Scanner numInput = new Scanner(fileName);
+			while (numInput.hasNext()) {
+				int num = numInput.nextInt();
+				if (num % 2 == 0) {
+					evenNumsArray.add(num);
+				}
+			}
+			numInput.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return evenNumsArray;
+	}
+	
+	public static int oddNumSum() {
+		numberOfNums = 0;
+		int returnNum = 0;
+		try {
+			Scanner numInput = new Scanner(fileName);
+			while (numInput.hasNext()) {
+				int num = numInput.nextInt();
+				if (num % 2 != 0) {
+					returnNum += num;
+					numberOfNums++;
+				}
+			}
+			numInput.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return returnNum;
+	}
+	
+	public static int oddNumAverage() {
+		return (oddNumSum() / numberOfNums);
+	}
+	
+	public static int evenNumSum() {
+		numberOfNums = 0;
+		int returnNum = 0;
+		try {
+			Scanner numInput = new Scanner(fileName);
+			while (numInput.hasNext()) {
+				int num = numInput.nextInt();
+				if (num % 2 == 0) {
+					returnNum += num;
+					numberOfNums++;
+				}
+			}
+			numInput.close();
+			
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return returnNum;
+	}
+	
+	public static int evenNumAverage() {
+		return evenNumSum() / numberOfNums;
 	}
 	
 	public static void playAgain() {
@@ -373,7 +417,7 @@ public class TextFilePractice {
 			Scanner input = new Scanner(System.in);
 			String selection = input.nextLine();
 			if (selection.equalsIgnoreCase("y") || selection.equalsIgnoreCase("yes")) {
-				programStart();
+				programChooser();
 			}
 			else {
 				System.out.println("Later tater!");
@@ -387,6 +431,7 @@ public class TextFilePractice {
 	public static void fileHandler() {
 		if (started) {
 			System.out.println("Would you like to use the same file?");
+			@SuppressWarnings("resource")
 			Scanner input = new Scanner(System.in);
 			String selection = input.nextLine();
 			if (selection.equalsIgnoreCase("y") || selection.equalsIgnoreCase("yes")) {
@@ -398,9 +443,80 @@ public class TextFilePractice {
 			}
 		} else {
 			System.out.print("Enter the file name: ");
+			@SuppressWarnings("resource")
 			Scanner input = new Scanner(System.in);
 			fileName = new File(input.nextLine());
 			started = true;
 		}
+	}
+	
+	public static void programChooser() {
+		try {
+			System.out.println("Hi There! Is your file text or numeric?");
+			@SuppressWarnings("resource")
+			Scanner input = new Scanner(System.in);
+			String choice = input.nextLine();
+			System.out.println("Choice is: " + choice);
+			if (choice.equals("text") || choice.equals("t")) {
+				stringProgramStart();
+			}
+			if (choice.equals("numeric") || choice.equals("num") || choice.equals("number")) {
+				numProgramStart();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}	
+	}
+	
+	public static void numProgramStart() {
+		try {
+			fileHandler();
+			System.out.println("Hello Dave. What would you like me to do? ");
+			System.out.println("1) Find the sum of all numbers");
+			System.out.println("2) Find the average of all numbers");
+			System.out.println("3) Find all odd numbers");
+			System.out.println("4) Find all even numbers");
+			System.out.println("5) Find the sum of all the odd numbers");
+			System.out.println("6) Find the average of all the odd numbers");
+			System.out.println("7) Find the sum of all the even numbers");
+			System.out.println("8) Find the average of all the even numbers");
+			System.out.println("Please select an option");
+			
+			@SuppressWarnings("resource")
+			Scanner input = new Scanner(System.in);
+			int selection = input.nextInt();
+			
+			if (selection == 1) {
+				System.out.println(numSum());
+			}
+			else if (selection == 2) {
+				System.out.println(numAverage());
+			}
+			else if (selection == 3) {
+				System.out.println(oddNums());
+			}
+			else if (selection == 4) {
+				System.out.println(evenNums());
+			}
+			else if (selection == 5) {
+				System.out.println(oddNumSum());
+			}
+			else if (selection == 6) {
+				System.out.println(oddNumAverage());
+			}
+			else if (selection == 7) {
+				System.out.println(evenNumSum());
+			}
+			else if (selection == 8) {
+				System.out.println(evenNumAverage());
+			}
+			else {
+				System.out.println("I don't think you understood the instructions.");
+				playAgain();
+			}
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		playAgain();
 	}
 }
